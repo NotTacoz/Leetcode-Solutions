@@ -19,6 +19,8 @@ with open(os.path.join(__location__, "1.txt"), "r") as f:
         
 seen1 = sorted(seen1)
 seen2 = sorted(seen2)
+
+
         
         
 # iterate through each line of hashmap
@@ -29,7 +31,8 @@ distance = 0
 j = 0 # count var
 
 for x in seen1:
+    print(x, seen2[j])
     distance = distance+(abs(int(x)-int(seen2[j])))
-    j=+1
+    j+=1
     
 print(distance)
