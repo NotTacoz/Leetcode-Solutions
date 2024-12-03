@@ -31,8 +31,28 @@ distance = 0
 j = 0 # count var
 
 for x in seen1:
-    print(x, seen2[j])
+    # print(x, seen2[j])
     distance = distance+(abs(int(x)-int(seen2[j])))
     j+=1
     
-print(distance)
+print(distance) # part 1
+
+similarity = 0
+
+# create a hash map (dictionary) number: appearances
+
+#remove duplicate values of seen1
+
+maplol = {}
+
+seen1unique = list(set(seen1))
+for x in seen1:
+    maplol[int(x)] = seen2.count(x)
+
+for x, y in maplol.items():
+    if y != 0:
+        print(x,y)
+        print(x*y)
+        similarity = similarity + x * y
+        
+print(similarity) # part 2
